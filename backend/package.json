@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "node node_modules/prisma/build/index.js generate && tsc",
+
+    "build": "prisma generate && tsc",
     "start": "node dist/server.js",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
@@ -18,6 +19,12 @@
   "type": "commonjs",
   "dependencies": {
     "@prisma/client": "6.19.3",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.5.0",
     "bcryptjs": "^3.0.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.6",
@@ -29,12 +36,6 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/cookie-parser": "^1.4.10",
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.6",
-    "@types/jsonwebtoken": "^9.0.10",
-    "@types/node": "^25.5.0",
     "nodemon": "^3.1.14",
     "ts-node": "^10.9.2",
     "tsx": "^4.21.0"
